@@ -93,3 +93,23 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 # MyReads
+
+The project has been divided to two main components 
+main & Search Page
+
+Routing
+The main page contains a link to the search page. When the link is clicked, the search page is displayed and the URL in the browser’s address bar is /search. Routing is implemented with React Router
+
+The main page shows three shelves for books. Each book is shown on the correct shelf
+
+Each bookshelf is a reusable component
+
+Books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations =====>>>>> DONE Tested on two different browsers (FireFOX, GOOGLE Chrome)
+
+    a) As the user types into the search field, books that match the query are displayed on the page, along with their titles and authors. You can use throttle/debounce but are not required to do so. 
+    b) Search results are not shown when all of the text is deleted out of the search input box. 
+    c) Invalid queries are handled and prior search results are not shown. 
+    d) The search works correctly when a book does not have a thumbnail or an author. (To test this, try searching for "poetry" and "biography"). (It's fine to filter out books with missing thumbnails.) 
+The user is able to search for multiple words, such as “artificial intelligence DONE
+
+

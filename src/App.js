@@ -11,7 +11,6 @@ function App() {
   useEffect(() => {
     const getShelfs = async () => {
       const res = await BookAPI.getAll();  
-      console.log(res) 
       setbookShelfs(res);     
     };
     getShelfs();
@@ -19,12 +18,10 @@ function App() {
   const updateShelfs = ()=> {
     const getShelfs = async () => {
       const res = await BookAPI.getAll();  
-      console.log(res) 
       setbookShelfs(res);     
     };
     getShelfs();
   }
-  // const [showSearchPage, setShowSearchpage] = useState(false);
 
   return (
     <div className="app">

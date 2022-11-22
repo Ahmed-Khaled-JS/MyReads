@@ -8,9 +8,9 @@ const SearchPage = ({updateShelfs, bookShelfs}) => {
   const [query, setQuery] = useState("");
   const [books, setbooks] = useState([]);
   const updateQuery = (query) => {
-    setQuery(query.trim());
+    setQuery(query);
     const search = async () => {
-      const res = await BookAPI.search(query, 10);
+      const res = query && await BookAPI.search(query, 10);
       setbooks(res);
     };
     search();

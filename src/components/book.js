@@ -5,6 +5,7 @@ const Book = ({ book, updateShelfs, shelftype }) => {
   const updateshelf = (shelf, book) => {
     const update = async () => {
       const res = await BookAPI.update(book, shelf);
+      !res && console.log(res)
       updateShelfs();
     };
     update();

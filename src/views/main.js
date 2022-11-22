@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Book from "../components/book";
+
+import BookShelf from "../components/bookShelf";
 const Main = ({ updateShelfs, bookShelfs }) => {
     // const books = bookShelfs ? bookShelfs.filter(booksh => booksh.shelf === "currentlyReading") : []
     // console.log(books);
@@ -17,42 +18,16 @@ const Main = ({ updateShelfs, bookShelfs }) => {
         <div>
           <div className="bookshelf">
             <h2 className="bookshelf-title">Currently Reading</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-                {Array.isArray(bookShelfs) && (bookShelfs.filter(booksh => booksh.shelf === "currentlyReading").map((book) => (
-                    <li  key={book.id}>
-                           <Book updateShelfs={updateShelfs} book={book}/>
-                     </li>
-                )))
-            }
-              </ol>
-            </div>
+            <BookShelf bookShelfType="currentlyReading" bookShelfs={bookShelfs} updateShelfs={updateShelfs}/>
           </div>
           <div className="bookshelf">
             <h2 className="bookshelf-title">Want to Read</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-              {Array.isArray(bookShelfs) && (bookShelfs.filter(booksh => booksh.shelf === "wantToRead").map((book) => (
-                    <li  key={book.id}>
-                           <Book updateShelfs={updateShelfs} book={book}/>
-                     </li>
-                )))
-            }
-              </ol>
-            </div>
+            <BookShelf bookShelfType="wantToRead" bookShelfs={bookShelfs} updateShelfs={updateShelfs}/>
+            
           </div>
           <div className="bookshelf">
             <h2 className="bookshelf-title">Read</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-              {Array.isArray(bookShelfs) && (bookShelfs.filter(booksh => booksh.shelf === "read").map((book) => (
-                    <li  key={book.id}>
-                           <Book updateShelfs={updateShelfs} book={book}/>
-                     </li>
-                )))
-            }
-              </ol>
-            </div>
+            <BookShelf bookShelfType="read" bookShelfs={bookShelfs} updateShelfs={updateShelfs}/>
           </div>
         </div>
       </div>
