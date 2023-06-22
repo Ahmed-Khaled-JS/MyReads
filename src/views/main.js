@@ -2,13 +2,7 @@ import { Link } from "react-router-dom";
 
 import BookShelf from "../components/bookShelf";
 const Main = ({ updateShelfs, bookShelfs }) => {
-    // const books = bookShelfs ? bookShelfs.filter(booksh => booksh.shelf === "currentlyReading") : []
-    // console.log(books);
-    // const currentlyReading = books.map((book)=>(
-    //     <li  key={book.id}>
-    //         <Book book={book}/>
-    //     </li>
-    // ))
+    
   return (
     <div className="list-books">
       <div className="list-books-title">
